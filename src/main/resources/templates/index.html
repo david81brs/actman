@@ -36,7 +36,11 @@
             <td><span th:text="${macro.macrotitle}"> </span></td>
             <td><span th:text="${macro.macrocoordinator}"> </span></td>
             <td><span th:text="${macro.macrodescription}"> </span></td>
-            <td><a class="btn btn-danger" th:href="${(#mvc.url('MC#deletarMacro').arg(0, macro.macroid)).build()}">Deletar</a></td>
+            <td>
+                <a class="btn btn-danger" th:href="${(#mvc.url('MC#deletarMacro').arg(0, macro.macroid)).build()}">Deletar</a>
+                <a class="btn btn-info" th:href="@{'/edit/'+${macro.macroid}}">Edit</a>
+
+            </td>
         </tr>
     </div>
 
